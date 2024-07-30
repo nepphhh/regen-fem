@@ -1,0 +1,5 @@
+build/
+sparselizard_linux64_staticlib/
+gmsh/
+paraview/
+output.vtk
