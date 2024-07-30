@@ -1,7 +1,11 @@
 // Gmsh project created on Mon Jul 29 21:07:00 2024
-c0 = 0.1;
-c1 = 0.2;
-c2 = 0.4;
+Mesh.Format = 1; // msh output format
+Mesh.MshFileVersion = 2.2; // Version of the MSH file format to use
+
+cmin = 0.02;
+c0 = 0.05;
+c1 = 0.1;
+c2 = 0.2;
 n = 5;
 
 Rc = 0.7;
@@ -145,4 +149,4 @@ Physical Surface("Walls", 407) = {273, 277, 281, 285, 289, 293, 254, 326, 301, 3
 Physical Surface("Symmetry", 408) = {182, 3, 2, 1, 398, 110};
 //+
 channel_points[] = PointsOf{ Surface{325, 297, 273, 277, 281, 285, 289, 293, 254, 326, 301, 305, 309, 313, 317, 321}; };
-Characteristic Length{ channel_points[] } = 0.05;
+Characteristic Length{ channel_points[] } = cmin;
